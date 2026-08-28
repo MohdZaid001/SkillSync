@@ -386,75 +386,385 @@ section {
 
 .analyzer-section {
     min-height: 100vh;
-    padding-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
 }
 
-.analyzer-preview {
-    max-width: 70rem;
-    margin: auto;
-    display: flex;
+.analyzer-section .section-heading {
+    margin-bottom: 4rem;
+}
+
+
+/* ANALYZER WORKSPACE */
+
+.analyzer-workspace {
+    max-width: 78rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    gap: 0rem;
 }
 
-.upload-card {
-    width: 30rem;
-    min-height: 22rem;
-    padding: 3rem 2rem;
+
+/* INPUT CARDS */
+
+.input-card {
+    min-height: 27rem;
+    padding: 1.5rem;
     border: 1px solid #333;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.025);
-    text-align: center;
-    transition: 0.4s ease;
 }
 
-.upload-card:hover {
-    border-color: #777;
-    transform: translateY(-8px);
-    box-shadow: 0 15px 50px rgba(255,255,255,0.08);
-}
 
-.card-icon {
-    font-size: 3rem;
+/* CARD HEADER */
+
+.input-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.upload-card h3 {
+.input-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.input-icon {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #444;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.input-title h3 {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem;
+}
+
+.input-title span {
+    color: #777;
+    font-size: 0.75rem;
+}
+
+.required-badge {
+    border: 1px solid #444;
+    border-radius: 50px;
+    padding: 0.35rem 0.7rem;
+    color: #777;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+}
+
+
+/* RESUME DROP AREA */
+
+.resume-dropzone {
+    min-height: 18rem;
+    border: 1px dashed #555;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+.resume-dropzone:hover {
+    border-color: #777;
+    background: rgba(255,255,255,0.015);
+}
+
+.upload-cloud {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #444;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.upload-card p {
-    color: gray;
-    max-width: 20rem;
-    margin: 0 auto 2rem;
+.resume-dropzone h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
 }
 
-.upload-button,
-.jd-button {
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid #777;
+.resume-dropzone p {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.resume-dropzone p span {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+
+/* FILE TYPES */
+
+.file-types {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+.file-types span {
+    padding: 0.3rem 0.55rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    color: #777;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* SELECTED FILE */
+
+.selected-file {
+    display: none;
+    align-items: center;
+    gap: 0.8rem;
+
+    margin-top: 1rem;
+    padding: 0.7rem;
+
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+.selected-file-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    background: #151515;
+}
+
+.selected-file-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-file-info strong {
+    font-size: 0.8rem;
+}
+
+.selected-file-info small {
+    color: #666;
+    font-size: 0.65rem;
+}
+
+.remove-file {
+    border: none;
+    background: transparent;
+    color: #777;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+/* JOB DESCRIPTION */
+
+.jd-editor {
+    border: 1px solid #444;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.25);
+}
+
+.jd-editor textarea {
+    width: 100%;
+    height: 15rem;
+
+    padding: 1.2rem;
+
+    resize: none;
+    outline: none;
+    border: none;
+
     background: transparent;
     color: #ddd;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.jd-editor textarea::placeholder {
+    color: #555;
+}
+
+
+/* JD FOOTER */
+
+.jd-editor-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.7rem 0.9rem;
+    border-top: 1px solid #292929;
+}
+
+.jd-editor-footer span {
+    color: #555;
+    font-size: 0.7rem;
+}
+
+.jd-editor-footer span b {
+    color: #888;
+}
+
+.paste-jd-button {
+    padding: 0.45rem 0.8rem;
+
+    border: 1px solid #444;
+    border-radius: 50px;
+
+    background: transparent;
+    color: #999;
+
+    font-size: 0.65rem;
     cursor: pointer;
+}
+
+
+/* JD TIP */
+
+.jd-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+
+    margin-top: 1rem;
+    padding: 0.7rem;
+
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+}
+
+.jd-tip span {
+    color: #888;
+}
+
+.jd-tip p {
+    color: #666;
+    font-size: 0.7rem;
+}
+
+
+/* ANALYZE BUTTON AREA */
+
+.analyze-action {
+    max-width: 78rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.analyze-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 0.9rem 2rem;
+
+    border: none;
+    border-radius: 50px;
+
+    background: lightgray;
+    color: black;
+
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.08em;
-    transition: 0.3s;
+
+    cursor: pointer;
+
+    height: 3.5rem;
+    width: 60%;
+
+    margin: 2rem auto 0;
 }
 
-.upload-button:hover,
-.jd-button:hover {
-    background: #ddd;
-    color: black;
+
+/* =====================================================
+   ANALYZER RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .analyzer-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .analyzer-connector {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .connector-line {
+        width: 4rem;
+        height: 1px;
+    }
+
+    .analyze-action {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
 }
 
-.match-arrow {
-    font-size: 2.5rem;
-    color: #999;
-}
 
+@media (max-width: 600px) {
+
+    .analyzer-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .input-card {
+        padding: 1rem;
+    }
+
+    .required-badge {
+        display: none;
+    }
+
+    .resume-dropzone {
+        min-height: 15rem;
+    }
+
+    .analyze-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
 
 /* =====================================================
    FEATURES

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,49 +21,31 @@
         <!-- HEADER -->
         <header>
 
-            <h1 
-                data-aos="fade-down"
-                data-aos-duration="1500"
-                class="logo">
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">
                 SkillSync
             </h1>
 
             <nav>
 
-                <a 
-                    data-aos="fade-down"
-                    data-aos-duration="1500"
-                    onclick="location.href='#analyzer'">
+                <a data-aos="fade-down" data-aos-duration="1500" onclick="location.href='#analyzer'">
                     ANALYZE
                 </a>
 
-                <a 
-                    data-aos="fade-down"
-                    data-aos-duration="2000"
-                    onclick="location.href='#features'">
+                <a data-aos="fade-down" data-aos-duration="2000" onclick="location.href='#features'">
                     FEATURES
                 </a>
 
-                <a 
-                    data-aos="fade-down"
-                    data-aos-duration="2500"
-                    onclick="location.href='#how-it-works'">
+                <a data-aos="fade-down" data-aos-duration="2500" onclick="location.href='#how-it-works'">
                     HOW IT WORKS
                 </a>
 
-                <a 
-                    data-aos="fade-down"
-                    data-aos-duration="3000"
-                    onclick="location.href='#about'">
+                <a data-aos="fade-down" data-aos-duration="3000" onclick="location.href='#about'">
                     ABOUT
                 </a>
 
             </nav>
 
-            <button 
-                data-aos="fade-down"
-                data-aos-duration="1500"
-                onclick="location.href='#analyzer'"      
+            <button data-aos="fade-down" data-aos-duration="1500" onclick="location.href='#analyzer'"
                 class="btn-check-resume">
                 CHECK RESUME
             </button>
@@ -76,13 +59,8 @@
             <div class="hero-content">
 
                 <!-- TAG -->
-                <div 
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    data-aos-duration="1500"
-                    class="tag-box">
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                    data-aos-duration="1500" class="tag-box">
 
                     <div class="tag">
                         AI-POWERED RESUME ANALYZER 📃
@@ -92,11 +70,7 @@
 
 
                 <!-- HERO TITLE -->
-                <h1
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
+                <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
                     data-aos-duration="2000">
 
                     RESUME TO<br>
@@ -106,13 +80,8 @@
 
 
                 <!-- DESCRIPTION -->
-                <p
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    data-aos-duration="2500"
-                    class="description">
+                <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                    data-aos-duration="2500" class="description">
 
                     Upload your resume and paste a job description.
                     Our AI analyzes the match, identifies missing
@@ -123,23 +92,14 @@
 
 
                 <!-- BUTTONS -->
-                <div
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    data-aos-duration="3000"
-                    class="hero-buttons">
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                    data-aos-duration="3000" class="hero-buttons">
 
-                    <a 
-                onclick="location.href='#how-it-works'"      
-                        class="btn-how-it-works">
+                    <a onclick="location.href='#how-it-works'" class="btn-how-it-works">
                         HOW IT WORKS ➤
                     </a>
 
-                    <a 
-                onclick="location.href='#analyzer'"      
-                        class="btn-analyze-resume">
+                    <a onclick="location.href='#analyzer'" class="btn-analyze-resume">
                         ANALYZE RESUME ᯓ➤
                     </a>
 
@@ -149,70 +109,189 @@
 
         </main>
 
-                <!-- ANALYZER PREVIEW -->
+        <!-- ANALYZER -->
         <section id="analyzer" class="analyzer-section">
 
             <div class="section-heading">
-                <div class="section-tag">SMART ANALYSIS</div>
+
+                <div class="section-tag">
+                    AI RESUME MATCHER
+                </div>
 
                 <h2>
-                    SEE HOW WELL YOUR
-                    <span>RESUME MATCHES</span>
+                    TURN YOUR RESUME INTO
+                    <span>JOB INSIGHTS</span>
                 </h2>
 
-                <p>
-                    Compare your resume with any job description
-                    and discover exactly where you stand.
-                </p>
             </div>
 
 
-            <div class="analyzer-preview">
+            <div class="analyzer-workspace">
 
-                <div class="upload-card">
+                <!-- RESUME CARD -->
+                <div class="input-card resume-card">
 
-                    <div class="card-icon">📄</div>
+                    <div class="input-card-header">
 
-                    <h3>Upload Resume</h3>
+                        <div class="input-title">
 
-                    <p>
-                        Drop your resume here or choose a PDF file
-                        to start the analysis.
-                    </p>
+                            <div class="input-icon">
+                                📄
+                            </div>
 
-                    <button class="upload-button">
-                        CHOOSE RESUME
-                    </button>
+                            <div>
+                                <h3>YOUR RESUME</h3>
+                                <span>Upload your latest resume</span>
+                            </div>
+
+                        </div>
+
+                        <div class="required-badge">
+                            REQUIRED
+                        </div>
+
+                    </div>
+
+
+                    <!-- DROP ZONE -->
+                    <label for="resume-upload" class="resume-dropzone">
+
+                        <input type="file" id="resume-upload" accept=".pdf,.png,.jpg,.jpeg" hidden>
+
+                        <div class="upload-cloud">
+                            ↑
+                        </div>
+
+                        <h4>
+                            Drop your resume here
+                        </h4>
+
+                        <p>
+                            or <span>browse files</span>
+                        </p>
+
+                        <div class="file-types">
+
+                            <span>PDF</span>
+                            <span>PNG</span>
+                            <span>JPG</span>
+                            <span>JPEG</span>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- SELECTED FILE -->
+                    <div class="selected-file">
+
+                        <div class="selected-file-icon">
+                            📄
+                        </div>
+
+                        <div class="selected-file-info">
+
+                            <strong>
+                                Resume.pdf
+                            </strong>
+
+                            <small>
+                                Ready to analyze
+                            </small>
+
+                        </div>
+
+                        <button class="remove-file">
+                            ×
+                        </button>
+
+                    </div>
 
                 </div>
 
 
-                <div class="match-arrow">
-                    ➜
+                <!-- CONNECTION -->
+                <div class="analyzer-connector">
+                    
                 </div>
 
 
-                <div class="upload-card">
+                <!-- JOB DESCRIPTION CARD -->
+                <div class="input-card jd-card">
 
-                    <div class="card-icon">💼</div>
+                    <div class="input-card-header">
 
-                    <h3>Job Description</h3>
+                        <div class="input-title">
 
-                    <p>
-                        Paste the job description you want
-                        to compare against.
-                    </p>
+                            <div class="input-icon">
+                                💼
+                            </div>
 
-                    <button class="jd-button">
-                        PASTE JOB DESCRIPTION
-                    </button>
+                            <div>
+                                <h3>JOB DESCRIPTION</h3>
+                                <span>Paste the role you're targeting</span>
+                            </div>
+
+                        </div>
+
+                        <div class="required-badge">
+                            REQUIRED
+                        </div>
+
+                    </div>
+
+
+                    <!-- JD TEXTAREA -->
+                    <div class="jd-editor">
+
+                        <textarea id="job-description"
+                            placeholder="Paste the job description to see how well your resume fits the role."></textarea>
+
+                        <div class="jd-editor-footer">
+
+                            <span>
+                                <b>0</b> characters
+                            </span>
+
+                            <button type="button" class="paste-jd-button">
+                                📋 PASTE JD
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+              
 
                 </div>
+
+            </div>
+
+
+            <!-- ANALYZE ACTION -->
+            <div class="analyze-action">
+
+               
+
+
+                <button class="analyze-button">
+
+                    <span>
+                        ANALYZE MY RESUME
+                    </span>
+
+                    <strong>
+                        ᯓ➤
+                    </strong>
+
+                </button>
 
             </div>
 
         </section>
 
+        
         <!-- FEATURES -->
         <section id="features" class="features-section">
 
@@ -367,7 +446,7 @@
 
                     <div class="step-circle">02</div>
 
-                    <h3>Add Job Description  </h3>
+                    <h3>Add Job Description </h3>
 
                     <p>
                         Paste the job description
@@ -427,7 +506,7 @@
                 </h2>
 
                 <p>
-                    Instead of guessing, know exactly how well 
+                    Instead of guessing, know exactly how well
                     your resume fits the role.
                 </p>
 
@@ -552,22 +631,15 @@
         </footer>
 
         <!-- 3D MODEL -->
-        <spline-viewer
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-            data-aos-duration="3000"
-            class="hero-3d-model"
+        <spline-viewer data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+            data-aos-duration="3000" class="hero-3d-model"
             url="https://prod.spline.design/oO7hv2NF3GVN2GNn/scene.splinecode">
         </spline-viewer>
 
     </div>
 
     <!-- SPLINE -->
-    <script 
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js">
     </script>
 
 
@@ -579,4 +651,5 @@
     </script>
 
 </body>
+
 </html>
