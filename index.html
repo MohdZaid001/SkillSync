@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillSync - AI Resume Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <img class="background-gradient" src="gradient.png" alt="gradient">
+    <div class="background-blur"></div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+
+            <h1 
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                class="logo">
+                SkillSync
+            </h1>
+
+            <nav>
+
+                <a 
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    onclick="location.href='#analyzer'">
+                    ANALYZE
+                </a>
+
+                <a 
+                    data-aos="fade-down"
+                    data-aos-duration="2000"
+                    onclick="location.href='#features'">
+                    FEATURES
+                </a>
+
+                <a 
+                    data-aos="fade-down"
+                    data-aos-duration="2500"
+                    onclick="location.href='#how-it-works'">
+                    HOW IT WORKS
+                </a>
+
+                <a 
+                    data-aos="fade-down"
+                    data-aos-duration="3000"
+                    onclick="location.href='#about'">
+                    ABOUT
+                </a>
+
+            </nav>
+
+            <button 
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                onclick="location.href='#analyzer'"      
+                class="btn-check-resume">
+                CHECK RESUME
+            </button>
+
+        </header>
+
+
+        <!-- MAIN -->
+        <main>
+
+            <div class="hero-content">
+
+                <!-- TAG -->
+                <div 
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0"
+                    data-aos-duration="1500"
+                    class="tag-box">
+
+                    <div class="tag">
+                        AI-POWERED RESUME ANALYZER 📃
+                    </div>
+
+                </div>
+
+
+                <!-- HERO TITLE -->
+                <h1
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0"
+                    data-aos-duration="2000">
+
+                    RESUME TO<br>
+                    JOB MATCH
+
+                </h1>
+
+
+                <!-- DESCRIPTION -->
+                <p
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0"
+                    data-aos-duration="2500"
+                    class="description">
+
+                    Upload your resume and paste a job description.
+                    Our AI analyzes the match, identifies missing
+                    skills and keywords, and helps you improve your
+                    chances of getting shortlisted.
+
+                </p>
+
+
+                <!-- BUTTONS -->
+                <div
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0"
+                    data-aos-duration="3000"
+                    class="hero-buttons">
+
+                    <a 
+                onclick="location.href='#how-it-works'"      
+                        class="btn-how-it-works">
+                        HOW IT WORKS ➤
+                    </a>
+
+                    <a 
+                onclick="location.href='#analyzer'"      
+                        class="btn-analyze-resume">
+                        ANALYZE RESUME ᯓ➤
+                    </a>
+
+                </div>
+
+            </div>
+
+        </main>
+
+                <!-- ANALYZER PREVIEW -->
+        <section id="analyzer" class="analyzer-section">
+
+            <div class="section-heading">
+                <div class="section-tag">SMART ANALYSIS</div>
+
+                <h2>
+                    SEE HOW WELL YOUR
+                    <span>RESUME MATCHES</span>
+                </h2>
+
+                <p>
+                    Compare your resume with any job description
+                    and discover exactly where you stand.
+                </p>
+            </div>
+
+
+            <div class="analyzer-preview">
+
+                <div class="upload-card">
+
+                    <div class="card-icon">📄</div>
+
+                    <h3>Upload Resume</h3>
+
+                    <p>
+                        Drop your resume here or choose a PDF file
+                        to start the analysis.
+                    </p>
+
+                    <button class="upload-button">
+                        CHOOSE RESUME
+                    </button>
+
+                </div>
+
+
+                <div class="match-arrow">
+                    ➜
+                </div>
+
+
+                <div class="upload-card">
+
+                    <div class="card-icon">💼</div>
+
+                    <h3>Job Description</h3>
+
+                    <p>
+                        Paste the job description you want
+                        to compare against.
+                    </p>
+
+                    <button class="jd-button">
+                        PASTE JOB DESCRIPTION
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="features-section">
+
+            <div class="section-heading">
+
+                <div class="section-tag">WHY SKILLSYNC</div>
+
+                <h2>
+                    EVERYTHING YOU NEED TO
+                    <span>LAND THE RIGHT ROLE</span>
+                </h2>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-number">01</div>
+
+                    <div class="feature-icon">🎯</div>
+
+                    <h3>Match Score</h3>
+
+                    <p>
+                        Get a clear compatibility score showing
+                        how closely your resume matches the job.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">02</div>
+
+                    <div class="feature-icon">🔍</div>
+
+                    <h3>Missing Skills</h3>
+
+                    <p>
+                        Identify important skills mentioned in
+                        the job description but missing from your resume.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">03</div>
+
+                    <div class="feature-icon">⚡</div>
+
+                    <h3>Keyword Analysis</h3>
+
+                    <p>
+                        Discover important keywords that can make
+                        your resume more relevant to the role.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">04</div>
+
+                    <div class="feature-icon">📊</div>
+
+                    <h3>Skill Breakdown</h3>
+
+                    <p>
+                        Understand your strengths and weaknesses
+                        across the requirements of the job.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">05</div>
+
+                    <div class="feature-icon">💡</div>
+
+                    <h3>AI Suggestions</h3>
+
+                    <p>
+                        Receive practical suggestions to improve
+                        your resume for the target position.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">06</div>
+
+                    <div class="feature-icon">🚀</div>
+
+                    <h3>Action Plan</h3>
+
+                    <p>
+                        Turn your missing skills into a focused
+                        roadmap for becoming job-ready.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section id="how-it-works" class="workflow-section">
+
+            <div class="section-heading">
+
+                <div class="section-tag">SIMPLE PROCESS</div>
+
+                <h2>
+                    FROM RESUME TO
+                    <span>RESULTS</span>
+                </h2>
+
+            </div>
+
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+
+                    <div class="step-circle">01</div>
+
+                    <h3>Upload</h3>
+
+                    <p>
+                        Upload your existing resume
+                        in PDF format.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-line"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-circle">02</div>
+
+                    <h3>Add Job Description  </h3>
+
+                    <p>
+                        Paste the job description
+                        for your target role.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-line"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-circle">03</div>
+
+                    <h3>Analyze</h3>
+
+                    <p>
+                        SkillSync's AI compares both
+                        documents intelligently.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-line"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-circle">04</div>
+
+                    <h3>Improve</h3>
+
+                    <p>
+                        See your gaps and take action
+                        before applying.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RESULT PREVIEW -->
+        <section class="result-section">
+
+            <div class="section-heading">
+
+                <div class="section-tag">AI INSIGHTS</div>
+
+                <h2>
+                    KNOW YOUR
+                    <span>JOB READINESS</span>
+                </h2>
+
+                <p>
+                    Instead of guessing, know exactly how well 
+                    your resume fits the role.
+                </p>
+
+            </div>
+
+
+            <div class="result-dashboard">
+
+                <div class="score-area">
+
+                    <p class="result-label">OVERALL MATCH</p>
+
+                    <div class="score-circle">
+                        <strong>82</strong>
+                        <span>%</span>
+                    </div>
+
+                    <p class="score-status">
+                        Strong Match
+                    </p>
+
+                </div>
+
+
+                <div class="result-details">
+
+                    <div class="result-row">
+                        <span>Technical Skills</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div class="result-bar">
+                        <div class="result-fill result-fill-92"></div>
+                    </div>
+
+
+                    <div class="result-row">
+                        <span>Experience</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div class="result-bar">
+                        <div class="result-fill result-fill-78"></div>
+                    </div>
+
+
+                    <div class="result-row">
+                        <span>Keywords</span>
+                        <strong>84%</strong>
+                    </div>
+
+                    <div class="result-bar">
+                        <div class="result-fill result-fill-84"></div>
+                    </div>
+
+
+                    <div class="missing-skills">
+
+                        <p>Missing Skills</p>
+
+                        <span>Docker</span>
+                        <span>AWS</span>
+                        <span>CI/CD</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL CTA -->
+        <section id="about" class="cta-section">
+
+            <div class="cta-content">
+
+                <div class="section-tag">
+                    READY TO IMPROVE?
+                </div>
+
+                <h2>
+                    DON'T JUST ANALYZE.
+                    <br>
+                    <span>WORK SMARTER.</span>
+                </h2>
+
+                <p>
+                    Find your gaps. Improve your resume.
+                    Get closer to the right opportunity.
+                </p>
+
+                <a href="#analyzer" class="cta-button">
+                    ANALYZE MY RESUME ᯓ➤
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-logo">
+                SkillSync
+            </div>
+
+            <p>
+                AI-powered resume & job matching.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#analyzer">ANALYZE</a>
+                <a href="#features">FEATURES</a>
+                <a href="#how-it-works">HOW IT WORKS</a>
+                <a href="#about">ABOUT</a>
+
+            </div>
+
+        </footer>
+
+        <!-- 3D MODEL -->
+        <spline-viewer
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            data-aos-duration="3000"
+            class="hero-3d-model"
+            url="https://prod.spline.design/oO7hv2NF3GVN2GNn/scene.splinecode">
+        </spline-viewer>
+
+    </div>
+
+    <!-- SPLINE -->
+    <script 
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js">
+    </script>
+
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
