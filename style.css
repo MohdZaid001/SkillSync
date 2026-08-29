@@ -107,7 +107,7 @@ nav {
 nav a {
     z-index: 999;
     color: inherit;
-    font-size: 1rem;
+    font-size: 0.85rem;
     letter-spacing: 0.1rem;
     text-decoration: none;
     cursor: pointer;
@@ -125,7 +125,7 @@ nav a:hover {
     border-radius: 50px;
     background: #a7a7a7;
     color: #000;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
     transition: 0.5s;
@@ -408,7 +408,7 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.055);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
@@ -492,7 +492,7 @@ section {
 .resume-dropzone h4 {
     margin-bottom: 0.4rem;
     color: #f1f1f3;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .resume-dropzone p {
@@ -562,7 +562,7 @@ section {
     border: none;
     background: transparent;
     color: #777;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 
@@ -714,7 +714,7 @@ section {
 
 .feature-card {
     position: relative;
-    min-height: 19rem;
+    min-height: 18rem;
     padding: 2rem;
     overflow: hidden;
     border: 1px solid #2d2d2d;
@@ -908,30 +908,23 @@ section {
     justify-content: center;
     width: 205px;
     height: 205px;
-    margin: 1.5rem auto 1.2rem;
+    margin: 1rem auto 1rem;
     border: 8px solid rgba(155, 108, 255, 0.25);
     border-radius: 50%;
+
     background:
-        radial-gradient(circle, rgba(155, 108, 255, 0.16), rgba(88, 183, 255, 0.055) 52%, transparent 67%);
+    conic-gradient(
+        #b995ff var(--score-progress, 0%),
+        rgba(155, 108, 255, 0.25) var(--score-progress, 0%)
+    );
+
     box-shadow:
         0 0 0 7px rgba(155, 108, 255, 0.035),
         0 0 70px rgba(155, 108, 255, 0.13),
         inset 0 0 35px rgba(88, 183, 255, 0.05);
 }
 
-.score-circle::after {
-    position: absolute;
-    inset: -8px;
-    border: 2px solid #b995ff;
-    border-right-color: rgba(185, 149, 255, 0.9);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    border-radius: inherit;
-    content: "";
-    opacity: 0.8;
-    transform: rotate(28deg);
-    filter: drop-shadow(0 0 8px rgba(155, 108, 255, 0.55));
-}
+
 
 .score-circle strong {
     font-size: 4rem;
@@ -946,7 +939,7 @@ section {
 .score-circle span {
     margin-top: 1.7rem;
     color: #a7a7af;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     opacity: 0.7;
 }
 
@@ -958,7 +951,7 @@ section {
 }
 
 .score-description {
-    max-width: 270px;
+    max-width: 205px;
     color: #aaaab2;
     font-size: 0.82rem;
     line-height: 1.6;
@@ -1283,7 +1276,7 @@ section {
     margin: 0.6rem 0;
     padding-left: 0.2rem;
     color: #c2c2cb;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.65;
 }
 
@@ -1309,7 +1302,7 @@ section {
 .ai-summary p,
 .ai-recommendation p {
     color: #b9b9c1;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.65;
     opacity: 1;
 }
@@ -1649,4 +1642,317 @@ main::after {
     box-shadow:
         0 0 15px rgba(255, 255, 255, 0.2),
         0 0 40px rgba(155, 108, 255, 0.14);
+}
+
+
+
+/* =========================================================
+   AI INSIGHTS — ATS DASHBOARD UI
+   Visual-only override.
+   Existing IDs, classes and JS behavior are preserved.
+   ========================================================= */
+
+.result-section {
+    min-height: 100vh;
+    padding: 6rem 1.5rem 6rem;
+    background:
+        radial-gradient(circle at 18% 35%, rgba(155, 108, 255, 0.055), transparent 30rem),
+        radial-gradient(circle at 82% 55%, rgba(88, 183, 255, 0.035), transparent 30rem),
+        transparent;
+}
+
+.result-section .section-heading {
+    max-width: 76rem;
+    margin: 0 auto 2.5rem;
+}
+
+.result-section .section-heading h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: 0.075em;
+}
+
+.result-dashboard {
+    width: min(76rem, 100%);
+    max-width: 76rem;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 1.6rem;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.result-dashboard::before {
+    display: none;
+}
+
+/* LEFT SCORE CARD */
+
+.score-area {
+    min-width: 0;
+    min-height: 31rem;
+    padding: 2rem;
+    border: 1px solid rgba(155, 108, 255, 0.34);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(155, 108, 255, 0.075), transparent 14rem),
+        linear-gradient(145deg, rgba(155, 108, 255, 0.10), rgba(88, 183, 255, 0.018) 55%, rgba(85, 230, 210, 0.025)),
+        rgba(8, 8, 14, 0.88);
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+.result-label-row {
+    align-self: center;
+    margin-bottom: 1.3rem;
+}
+
+.result-label {
+    color: #f2f1f5;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.score-circle {
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 205px;
+    height: 205px;
+    margin: 1.2rem auto 1.8rem;
+    border: 0;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            from 0deg,
+            #b96cff 0%,
+            #7d7cff 38%,
+            #27c7ff 72%,
+            #12d5ba var(--score-progress, 0%),
+            rgba(255, 255, 255, 0.07) var(--score-progress, 0%),
+            rgba(255, 255, 255, 0.07) 100%
+        );
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.055),
+        0 0 34px rgba(155, 108, 255, 0.16),
+        0 0 80px rgba(88, 183, 255, 0.055);
+}
+
+/* Dark inner disc — keeps the progress ring clean */
+.score-circle::before {
+    position: absolute;
+    inset: 7px;
+    z-index: 0;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(20, 19, 31, 0.98), rgba(5, 6, 11, 0.99));
+    box-shadow:
+        inset 0 0 45px rgba(0, 0, 0, 0.62),
+        0 0 0 1px rgba(255, 255, 255, 0.025);
+    content: "";
+}
+
+.score-circle strong,
+.score-circle span {
+    position: relative;
+    z-index: 1;
+}
+
+.score-circle strong {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 0.95;
+    font-weight: 700;
+}
+
+.score-circle span {
+    margin: 0.75rem 0 0;
+    color: #b995ff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.score-status {
+    margin: 0.2rem 0 0.5rem;
+    color: #b995ff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.score-description {
+    max-width: 25rem;
+    color: #aaaab8;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+/* RIGHT BREAKDOWN CARD */
+
+.result-details {
+    min-width: 0;
+    min-height: 31rem;
+    padding: 2.9rem 2.6rem 2.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(155, 108, 255, 0.035), transparent 20rem),
+        rgba(7, 9, 14, 0.78);
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.result-details-header {
+    margin-bottom: 2.6rem;
+    padding-bottom: 1.35rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-mini-label {
+    color: #a77cff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.result-details-header h3 {
+    margin-top: 0.45rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.01em;
+}
+
+.result-details-header .required-badge {
+    padding: 0.55rem 0.9rem;
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.025);
+    color: #9fa0aa;
+    opacity: 1;
+}
+
+.result-metric {
+    margin-bottom: 2.25rem;
+    padding: 0;
+}
+
+.result-metric:hover {
+    background: transparent;
+}
+
+.result-row {
+    margin-bottom: 0.72rem;
+    font-size: 0.85rem;
+}
+
+.result-row span {
+    color: #e3e3e7;
+    font-size: 0.85rem;
+}
+
+.result-row strong {
+    color: #b995ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.result-bar {
+    height: 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow:
+        inset 0 1px 3px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.result-fill {
+    min-width: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        #9a5cff 0%,
+        #5d8cff 45%,
+        #19bdf2 75%,
+        #18d7b5 100%
+    );
+    box-shadow:
+        0 0 16px rgba(155, 108, 255, 0.22),
+        0 0 24px rgba(88, 183, 255, 0.10);
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* MISSING SKILLS */
+
+.missing-skills {
+    margin: 2.8rem 0 0;
+    padding: 1.25rem 1.3rem;
+    border: 1px solid rgba(255, 209, 102, 0.13);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(255, 209, 102, 0.05), rgba(255, 255, 255, 0.012)),
+        rgba(5, 6, 10, 0.42);
+}
+
+.insight-heading p {
+    color: #e8e8ec;
+    font-size: 0.85rem;
+}
+
+.insight-count {
+    padding: 0.45rem 0.75rem;
+    background: rgba(255, 209, 102, 0.08);
+    color: #ffd166 !important;
+    font-size: 0.78rem;
+}
+
+.skill-tags {
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.skill-tags span {
+    padding: 0.55rem 0.85rem;
+}
+
+/* THREE INSIGHT CARDS BELOW */
+
+.ai-insights-grid {
+    width: min(76rem, 100%);
+    max-width: 76rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.35rem;
+    margin: 1.35rem auto 0;
+}
+
+.insight-card {
+    min-height: 18rem;
+    padding: 1.65rem;
+    border-radius: 22px;
+}
+
+.insight-card h3 {
+    font-size: 1.4rem;
+}
+
+.insight-card li,
+.ai-summary p,
+.ai-recommendation p {
+    font-size: 0.9rem;
+}
+
+/* Keep the three screenshot-style accent identities */
+.strengths-card {
+    border-color: rgba(99, 230, 164, 0.25);
+}
+
+.recommendation-card {
+    border-color: rgba(155, 108, 255, 0.25);
+}
+
+.improvement-card {
+    border-color: rgba(255, 209, 102, 0.25);
 }

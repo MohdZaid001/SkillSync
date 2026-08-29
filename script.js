@@ -236,6 +236,19 @@ analyzeButton.addEventListener("click", async () => {
             "overall-score"
         ).textContent = data.overall_score;
 
+        const scoreCircle = document.querySelector(".score-circle");
+
+if (scoreCircle) {
+    const score = Math.min(
+        100,
+        Math.max(0, Number(data.overall_score))
+    );
+
+    scoreCircle.style.setProperty(
+        "--score-progress",
+        score + "%"
+    );
+}
 
         // ========================================
         // UPDATE STATUS
