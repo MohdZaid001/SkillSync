@@ -138,10 +138,6 @@ pasteButton.addEventListener("click", async () => {
 
 analyzeButton.addEventListener("click", async () => {
 
-    // ----------------------------------------
-    // VALIDATION
-    // ----------------------------------------
-
     if (!resumeInput.files.length) {
 
         alert("Please upload your resume first.");
