@@ -35,8 +35,7 @@ if not GEMINI_API_KEY:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 
-# HOME
-
+# HOME only for checkup iss running backend
 @app.get("/")
 def home():
     return {

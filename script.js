@@ -19,6 +19,56 @@ resumeDropzone.addEventListener("click", (event) => {
 
 });
 
+// ========================================
+// DRAG AND DROP RESUME
+// ========================================
+
+resumeDropzone.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    resumeDropzone.classList.add("drag-active");
+});
+
+
+resumeDropzone.addEventListener("dragleave", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    resumeDropzone.classList.remove("drag-active");
+});
+
+
+resumeDropzone.addEventListener("drop", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    resumeDropzone.classList.remove("drag-active");
+
+    const files = event.dataTransfer.files;
+
+    if (!files.length) {
+        return;
+    }
+
+    const file = files[0];
+
+    // Only allow PDF
+    if (file.type !== "application/pdf") {
+        alert("Please upload a PDF resume.");
+        return;
+    }
+
+    // Put dropped file into the file input
+    const dataTransfer = new DataTransfer();
+
+    dataTransfer.items.add(file);
+
+    resumeInput.files = dataTransfer.files;
+
+    // Trigger existing change handler
+    resumeInput.dispatchEvent(new Event("change"));
+});
 
 // When file is selected
 resumeInput.addEventListener("change", () => {
