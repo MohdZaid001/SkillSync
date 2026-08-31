@@ -20,6 +20,11 @@ The basic idea is simple:
 5.  See missing skills
 6.  Get suggestions to improve the resume
 
+## 🎥 Demo
+
+<video src="./DEMO.mp4" controls width="800"></video>
+
+
 ## ✨ Current Features
 
 -   📄 PDF resume upload
@@ -63,7 +68,8 @@ SkillSync/
 ├── index.html
 ├── README.md
 ├── script.js
-└── style.css
+├── style.css
+└── DEMO.mp4
 ```
 
 ## ▶️ How to Run
@@ -95,18 +101,6 @@ Open `index.html` in your browser.
 Make sure the backend is running before using the **Analyze Resume**
 button.
 
-## 🚧 Still Incomplete
-
-Since this was made in a short hackathon session, a few things are still
-being worked on:
-
--   Better error handling
--   More accurate AI scoring
--   More polished result states
--   Better mobile responsiveness
--   Deployment
--   UI Enhance
-
 ## 🎯 Hackathon Goal
 
 The main goal was to quickly build a working prototype that shows how AI
@@ -117,10 +111,6 @@ can help students/job seekers understand:
 There is still a lot that can be improved, but this is the current
 working prototype built during the hackathon till now. 🚀
 
-## 👨‍💻 Status
-
-**Prototype / Work in Progress**
-It is in under progress!!!
 
 ## 👨‍💻 Developer
 
