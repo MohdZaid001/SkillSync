@@ -22,7 +22,7 @@ The basic idea is simple:
 
 ## 🎥 Demo
 
-<video src="./DEMO.mp4" controls width="800"></video>
+https://github.com/user-attachments/assets/a0be5c5e-7ba8-41c5-a5c2-c4566489db8d
 
 
 ## ✨ Current Features
